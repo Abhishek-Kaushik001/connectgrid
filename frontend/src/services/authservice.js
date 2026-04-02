@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/users";
+const API_URL = "https://backend-app-wf2v.onrender.com/api/users";
 
 // REGISTER USER
 export const registerUser = async (formData) => {
