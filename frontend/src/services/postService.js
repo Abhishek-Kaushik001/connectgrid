@@ -102,3 +102,26 @@ export const addComment = async (postId, text) => {
 
 
 
+// ========= DELETE POST =========
+export const deletePost = async (postId) => {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(
+    `http://localhost:5000/api/posts/${postId}`,
+    {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Delete failed");
+  }
+
+  return data;
+};
+

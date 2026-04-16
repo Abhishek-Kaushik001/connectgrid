@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e2f;
+  padding: 12px 20px;
+  color: white;
+  .navbar {
+  background: linear-gradient(to right, #1e1e2f, #2c2c54);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect 🔥 */
+.nav-links button:hover {
+  background: #ff4d4d;
+  color: white;
+  transform: translateY(-2px);
+}
+

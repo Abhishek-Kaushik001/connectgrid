@@ -1,32 +1,38 @@
+import "./Navbar.css";
+
 import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-
     localStorage.removeItem("token");
-
     navigate("/login");
-
   };
 
   return (
 
-    <div style={{marginBottom:"20px"}}>
+    <div className="navbar">
 
-      <button onClick={() => navigate("/")}>
-        Feed
-      </button>
+      <h2 className="logo">ConnectGrid</h2>
 
-      <button onClick={() => navigate("/profile")}>
-        Profile
-      </button>
+      <div className="nav-links">
 
-      <button onClick={handleLogout}>
-        Logout
-      </button>
+        <button onClick={() => navigate("/")}>
+          Feed
+        </button>
+
+        <button onClick={() => navigate("/profile")}>
+          Profile
+        </button>
+
+        <button onClick={handleLogout}>
+          Logout
+        </button>
+
+      </div>
 
     </div>
 
@@ -35,4 +41,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

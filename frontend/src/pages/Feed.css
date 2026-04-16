@@ -1,0 +1,91 @@
+.feed-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.post-card h4 {
+  margin-bottom: 5px;
+}
+
+.post-card p {
+  margin: 5px 0;
+}
+
+.btn-like {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.input-box {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 70%;
+}
+
+.textarea-box {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.comment-box {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.create-post {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.post-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.post-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.post-btn:hover {
+  background: #e60000;
+}
