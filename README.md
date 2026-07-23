@@ -1,54 +1,57 @@
 # 🌐 ConnectGrid
 
-A modern **Full Stack Social Media Web Application** built using the **MERN Stack**. Users can create an account, log in securely, create posts, like posts, manage their profile, and interact through a clean and responsive interface.
+A modern **Full Stack Social Media Web Application** built using the **MERN Stack**. Users can securely register, log in, create posts, like posts, manage their profile, and interact through a clean and responsive interface.
 
 ---
 
-## 🚀 Live Demo
+# 🚀 Live Demo
 
-🌍 **Frontend:** https://your-vercel-app.vercel.app
+### 🌍 Frontend
+👉 **https://connectgrid-kpbj.vercel.app**
 
-⚙️ **Backend API:** https://connectgrid-backend-abhishek.onrender.com
+### ⚙️ Backend API
+👉 **https://connectgrid-backend-abhishek.onrender.com**
 
 ---
 
-## 📸 Features
+# 📸 Features
 
-- 🔐 JWT Authentication (Register & Login)
-- 👤 User Profile
+- 🔐 JWT Authentication
+- 👤 User Registration & Login
 - 📝 Create Posts
 - ❤️ Like Posts
 - 🗑️ Delete Own Posts
-- 📱 Fully Responsive Design
+- 👤 User Profile
 - 🔒 Protected Routes
+- 📱 Responsive UI
 - ☁️ MongoDB Atlas Database
 - 🚀 Deployed on Vercel & Render
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Frontend
 - React.js
-- React Router
+- React Router DOM
 - CSS3
-- Axios / Fetch API
+- Fetch API
 
 ### Backend
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
 - Mongoose
 - JWT Authentication
 - bcrypt
-- CORS
 - dotenv
+- CORS
 
 ---
 
-## 📂 Project Structure
+# 📂 Folder Structure
 
-```
+```text
 ConnectGrid
 │
 ├── frontend
@@ -66,15 +69,15 @@ ConnectGrid
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Abhishek-Kaushik001/connectgrid.git
 ```
 
-### Backend Setup
+## Backend
 
 ```bash
 cd backend
@@ -82,7 +85,7 @@ npm install
 npm start
 ```
 
-### Frontend Setup
+## Frontend
 
 ```bash
 cd frontend
@@ -92,9 +95,9 @@ npm run dev
 
 ---
 
-## 🔑 Environment Variables
+# 🔑 Environment Variables
 
-Create a `.env` file inside the backend folder.
+Create a `.env` file inside the **backend** folder.
 
 ```env
 PORT=5000
@@ -104,19 +107,16 @@ JWT_SECRET=Your_JWT_SECRET
 
 ---
 
-## 📷 Screenshots
+# 📸 Project Preview
 
-> Add screenshots of:
->
-> - Login Page
-> - Register Page
-> - Feed
-> - Profile
-> - Create Post
+- Login Page
+- Register Page
+- Feed Page
+- User Profile
+- Create Post
 
----
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Abhishek Kaushik**
 
