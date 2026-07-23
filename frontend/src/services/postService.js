@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/posts";
+const API_URL = "https://connectgrid-backend-abhishek.onrender.com/api/posts";
 
 
 // ================= GET ALL POSTS =================
@@ -15,7 +15,6 @@ export const getAllPosts = async () => {
 
   return data;
 };
-
 
 
 // ================= CREATE POST =================
@@ -51,7 +50,7 @@ export const likePost = async (postId) => {
 
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`http://localhost:5000/api/posts/${postId}/like`, {
+  const response = await fetch(`${API_URL}/${postId}/like`, {
 
     method: "PUT",
 
@@ -71,14 +70,13 @@ export const likePost = async (postId) => {
 };
 
 
-
 // ================= ADD COMMENT =================
 
 export const addComment = async (postId, text) => {
 
   const token = localStorage.getItem("token");
 
-  const response = await fetch(`http://localhost:5000/api/posts/${postId}/comment`, {
+  const response = await fetch(`${API_URL}/${postId}/comment`, {
 
     method: "POST",
 
@@ -101,20 +99,21 @@ export const addComment = async (postId, text) => {
 };
 
 
+// ================= DELETE POST =================
 
-// ========= DELETE POST =========
 export const deletePost = async (postId) => {
+
   const token = localStorage.getItem("token");
 
-  const response = await fetch(
-    `http://localhost:5000/api/posts/${postId}`,
-    {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
+  const response = await fetch(`${API_URL}/${postId}`, {
+
+    method: "DELETE",
+
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+
+  });
 
   const data = await response.json();
 
@@ -124,4 +123,3 @@ export const deletePost = async (postId) => {
 
   return data;
 };
-
