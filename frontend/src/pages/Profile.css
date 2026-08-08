@@ -1,0 +1,22 @@
+.profile-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.profile-container h2 {
+  margin-bottom: 20px;
+}
+
+.profile-container h3 {
+  margin: 15px 0;
+}
+
+.profile-container p {
+  margin: 15px 0;
+}
+
+.profile-container hr {
+  margin: 30px 0;
+}

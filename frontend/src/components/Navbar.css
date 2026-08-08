@@ -2,22 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1e1e2f;
-  padding: 12px 20px;
-  color: white;
-  .navbar {
   background: linear-gradient(to right, #1e1e2f, #2c2c54);
   padding: 15px 20px;
   border-radius: 10px;
-}
+  color: white;
 }
 
 .logo {
   margin: 0;
 }
 
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
 .nav-links button {
-  margin-left: 10px;
   padding: 6px 14px;
   border: none;
   border-radius: 6px;
@@ -27,10 +30,26 @@
   transition: all 0.3s ease;
 }
 
-/* Hover effect 🔥 */
+
 .nav-links button:hover {
   background: #ff4d4d;
   color: white;
   transform: translateY(-2px);
 }
 
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

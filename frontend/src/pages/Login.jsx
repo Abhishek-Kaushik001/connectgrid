@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../services/authservice";
+import "./Login.css";
 
 function Login() {
+
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
 
   const handleChange = (e) => {
     setFormData({
@@ -17,51 +20,76 @@ function Login() {
     });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+
       const data = await loginUser(formData);
 
-      // Save token in localStorage
       localStorage.setItem("token", data.token);
 
       alert("Login successful ✅");
 
-      // Redirect to feed
       navigate("/");
+
     } catch (error) {
+
       alert(error.message);
+
     }
   };
 
+
   return (
-    <div>
-      <h2>Login Page</h2>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <br /><br />
+    <div className="login-container">
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter Password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-        <br /><br />
+      <div className="login-box">
 
-        <button type="submit">Login</button>
-      </form>
+        <h1>Welcome Back 👋</h1>
+
+
+        <form onSubmit={handleSubmit}>
+
+
+          <input
+            className="login-input"
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+
+
+          <input
+            className="login-input"
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+
+
+          <button 
+            className="login-btn"
+            type="submit"
+          >
+            Login
+          </button>
+
+
+        </form>
+
+      </div>
+
     </div>
+
   );
 }
+
 
 export default Login;
