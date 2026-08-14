@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { registerUser } from "../services/authservice";
 import { useNavigate } from "react-router-dom";
+import "./Register.css";
 
 function Register() {
 
@@ -39,15 +40,17 @@ function Register() {
 
   };
 
-  return (
+ return (
+  <div className="register-container">
 
-    <div>
+    <div className="register-box">
 
-      <h2>Register Page</h2>
+      <h1>Create Account</h1>
 
       <form onSubmit={handleSubmit}>
 
         <input
+          className="register-input"
           type="text"
           name="name"
           placeholder="Enter Name"
@@ -55,9 +58,8 @@ function Register() {
           onChange={handleChange}
         />
 
-        <br /><br />
-
         <input
+          className="register-input"
           type="email"
           name="email"
           placeholder="Enter Email"
@@ -65,9 +67,8 @@ function Register() {
           onChange={handleChange}
         />
 
-        <br /><br />
-
         <input
+          className="register-input"
           type="password"
           name="password"
           placeholder="Enter Password"
@@ -75,9 +76,7 @@ function Register() {
           onChange={handleChange}
         />
 
-        <br /><br />
-
-        <button type="submit">
+        <button className="register-btn" type="submit">
           Register
         </button>
 
@@ -85,7 +84,8 @@ function Register() {
 
     </div>
 
-  );
+  </div>
+);
 }
 
 export default Register;
